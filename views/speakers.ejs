@@ -1,0 +1,63 @@
+<html>
+
+<%- include('includes/header.ejs'); %>
+
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 headingbook">
+        <center>
+            <h1>SPEAKERS</h1>
+        </center>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8">
+        <div class="row books">
+            <% speakers.forEach(speaker => { %>
+            <div class="col-4 btnregister">
+                <center>
+                    <a href="/speaker/<%= speaker.id %>">
+                        <p><%= speaker.workplace %></p>
+                        <div class="rupees">
+                            <span><%= speaker.name %></span>
+                        </div>
+                    </a>
+                    <a href="/speaker/delete/<%= speaker.id %>"><input type="submit" name="btnsubmit"
+                            value="delete"></a>
+                </center>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8 btnregister">
+        <center>
+            <h1 class="headinghome">Join Our Community Now!</h1>
+            <p class="headingp">Do you have a favorite type of book, either fiction or non-fiction? Are you thinking
+                about branching out and enjoying a new genre? If so, you might be interested in a list of book types
+                or genres. See if any of the below sub-types catch your eye.</p>
+            <a href="/registration"><input type="submit" name="btnsubmit" value="Register Now"></a>
+        </center>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+</body>
+
+</html>

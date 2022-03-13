@@ -1,0 +1,27 @@
+<html>
+
+<%- include('includes/header.ejs'); %>
+
+<body class="regbody">
+    <div class="row">
+        <div class="regbox">
+            <h3>Registration</h3>
+            <form action="/speaker/update/<%= speaker.id %>" method="post">
+                <p>Name</p>
+                <input type="text" name="name" value="<%= speaker.name %>">
+                <p>Title</p>
+                <input type="text" name="title" value="<%= speaker.title %>">
+                <p>About</p>
+                <input type="text" name="about" value="<%= speaker.about %>">
+                <p>Workplace</p>
+                <input type="text" name="workplace" value="<%= speaker.workplace %>">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="book.js"></script>
+</body>
+
+</html>

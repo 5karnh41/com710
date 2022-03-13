@@ -1,0 +1,33 @@
+<html>
+
+<%- include('includes/header.ejs'); %>
+
+
+<div class="row">
+    <div class="col-2">
+        &nbsp;
+    </div>
+    <div class="col-8">
+        <div class="row books">
+            <div class="col-4 btnregister">
+                <center>
+                    <h1><%= speaker.name %></h1>
+                    <p><%= speaker.workplace %></p>
+                    <div class="rupees">
+                        <span><%= speaker.title %></span>
+                    </div>
+                    <span> <%= speaker.about %> </span>
+                    <div>
+                        <a href="/update/<%= speaker.id %>"><input type="submit" name="btnsubmit" value="Update"></a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+        &nbsp;
+    </div>
+</div>
+</body>
+
+</html>
